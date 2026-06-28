@@ -1,0 +1,25 @@
+[package]
+name = "angelus-wys"
+version = "0.1.0"
+edition = "2021"
+authors = ["Fernando Saraiva <seu-email@example.com>"]
+description = "A lightweight text editor inspired by GNU Nano, written in Rust"
+repository = "https://github.com/seu-usuario/AngelusWys"
+license = "MIT"
+
+[dependencies]
+crossterm = "0.27"
+anyhow = "1.0"
+
+[dev-dependencies]
+assert_cmd = "2.0"
+predicates = "3.0"
+
+[[bin]]
+name = "angelus"
+path = "src/main.rs"
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
